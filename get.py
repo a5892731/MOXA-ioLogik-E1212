@@ -33,7 +33,6 @@ class GetRequestData():
         self.DO = None
         self.DI = None
 
-        self.start_time = time() # for testing
         self.last_get_time = time()
 
     def get_sysInfo(self):
