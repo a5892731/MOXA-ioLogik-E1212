@@ -23,6 +23,7 @@ class GetRequestData():
         self.address = address
 
         self.connection_error = None # True if there is no connection for more than 1 s
+        self.data_error = None
         self.replay_status_code = None # connection statuses = 200; 404 etc
         self.reply = None # request response
         self.json_data = None # converted response to json
@@ -84,10 +85,10 @@ class GetRequestData():
                 json_blob = loads(self.reply.content.decode('utf-8'))
                 self.json_data = json_blob
 
-                #print(self.json_data)
+                self.data_error = False
 
             except ValueError:
-                print("Error processing json blob")
+                self.data_error = True
 
 
 
