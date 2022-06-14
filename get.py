@@ -98,7 +98,7 @@ if __name__ == "__main__":
     while True:
         data.run()
 
-        sleep(0.1)
+        sleep(1)
         print(data.deviceUpTime)
         print("di {}".format(data.DO))
 
