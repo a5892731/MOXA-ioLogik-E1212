@@ -28,7 +28,6 @@ class PutRequestData():
 
         self.DO_to_json = {'slot': 0, 'io': {'do': self.DO}}
 
-        self.start_time = time() # for testing
         self.last_put_time = time()
 
     def put_DO(self):
